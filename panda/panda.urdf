@@ -9,13 +9,17 @@
       <geometry>
         <mesh filename="meshes/collision/link0.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/link0.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </collision>
   </link>
   <link name="panda_link1">
@@ -23,13 +27,17 @@
       <geometry>
         <mesh filename="meshes/collision/link1.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/link1.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </collision>
   </link>
   <joint name="panda_joint1" type="revolute">
@@ -45,13 +53,17 @@
       <geometry>
         <mesh filename="meshes/collision/link2.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/link2.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </collision>
   </link>
   <joint name="panda_joint2" type="revolute">
@@ -67,13 +79,17 @@
       <geometry>
         <mesh filename="meshes/collision/link3.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/link3.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </collision>
   </link>
   <joint name="panda_joint3" type="revolute">
@@ -89,13 +105,17 @@
       <geometry>
         <mesh filename="meshes/collision/link4.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/link4.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </collision>
   </link>
   <joint name="panda_joint4" type="revolute">
@@ -111,13 +131,17 @@
       <geometry>
         <mesh filename="meshes/collision/link5.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/link5.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </collision>
   </link>
   <joint name="panda_joint5" type="revolute">
@@ -133,13 +157,17 @@
       <geometry>
         <mesh filename="meshes/collision/link6.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/link6.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </collision>
   </link>
   <joint name="panda_joint6" type="revolute">
@@ -155,13 +183,17 @@
       <geometry>
         <mesh filename="meshes/collision/link7.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/link7.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </collision>
   </link>
   <joint name="panda_joint7" type="revolute">
@@ -189,13 +221,17 @@
       <geometry>
         <mesh filename="meshes/collision/hand.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/hand.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_white">
+        <color rgba="1. 1. 1. 1."/>
+      </material>
     </collision>
   </link>
   <link name="panda_leftfinger">
@@ -203,13 +239,17 @@
       <geometry>
         <mesh filename="meshes/collision/finger.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_black">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
         <mesh filename="meshes/collision/finger.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_black">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
     </collision>
   </link>
   <link name="panda_rightfinger">
@@ -218,14 +258,18 @@
       <geometry>
         <mesh filename="meshes/collision/finger.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_black">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 3.14159265359" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/collision/finger.stl"/>
       </geometry>
-      <material name="panda_white"/>
+      <material name="panda_black">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
     </collision>
   </link>
   <joint name="panda_finger_joint1" type="prismatic">
@@ -243,7 +287,7 @@
     <limit effort="20" lower="0.0" upper="0.04" velocity="0.2"/>
     <mimic joint="panda_finger_joint1"/>
   </joint>
-  <material name="panda_white">
-    <color rgba="1. 1. 1. 1."/>
+  <material name="panda_black">
+    <color rgba=".2 .2 .2 1"/>
   </material>
 </robot>

@@ -54,14 +54,18 @@
       <geometry>
         <mesh filename="meshes/iiwa14/visual/link_0.stl"/>
       </geometry>
-      <material name="Grey"/>
+      <material name="Grey">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/iiwa14/collision/link_0.stl"/>
       </geometry>
-      <material name="Grey"/>
+      <material name="Grey">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
     </collision>
     <self_collision_checking>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -91,14 +95,18 @@
       <geometry>
         <mesh filename="meshes/iiwa14/visual/link_1.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/iiwa14/collision/link_1.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </collision>
   </link>
   <!-- joint between link_1 and link_2 -->
@@ -122,14 +130,18 @@
       <geometry>
         <mesh filename="meshes/iiwa14/visual/link_2.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/iiwa14/collision/link_2.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </collision>
   </link>
   <!-- joint between link_2 and link_3 -->
@@ -153,14 +165,18 @@
       <geometry>
         <mesh filename="meshes/iiwa14/visual/link_3.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/iiwa14/collision/link_3.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </collision>
   </link>
   <!-- joint between link_3 and link_4 -->
@@ -184,14 +200,18 @@
       <geometry>
         <mesh filename="meshes/iiwa14/visual/link_4.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/iiwa14/collision/link_4.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </collision>
   </link>
   <!-- joint between link_4 and link_5 -->
@@ -215,14 +235,18 @@
       <geometry>
         <mesh filename="meshes/iiwa14/visual/link_5.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/iiwa14/collision/link_5.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </collision>
   </link>
   <!-- joint between link_5 and link_6 -->
@@ -246,14 +270,18 @@
       <geometry>
         <mesh filename="meshes/iiwa14/visual/link_6.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/iiwa14/collision/link_6.stl"/>
       </geometry>
-      <material name="Orange"/>
+      <material name="Orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+      </material>
     </collision>
   </link>
   <!-- joint between link_6 and link_7 -->
@@ -277,14 +305,18 @@
       <geometry>
         <mesh filename="meshes/iiwa14/visual/link_7.stl"/>
       </geometry>
-      <material name="Grey"/>
+      <material name="Grey">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/iiwa14/collision/link_7.stl"/>
       </geometry>
-      <material name="Grey"/>
+      <material name="Grey">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
     </collision>
   </link>
   <joint name="iiwa_joint_ee" type="fixed">
