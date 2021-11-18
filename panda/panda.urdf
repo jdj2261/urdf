@@ -4,7 +4,7 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="panda" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <link name="pedestal">
+  <link name="panda_pedestal">
     <visual>
       <origin rpy="1.57079632679 0 -1.57079632679" xyz="0.26 0.345 -0.91488"/>
       <geometry>
@@ -26,7 +26,7 @@
       <inertia ixx="5.0635929" ixy="0.00103417" ixz="0.80199628" iyy="6.08689388" iyz="0.00105311" izz="4.96191932"/>
     </inertial>
   </link>
-  <link name="controller_box">
+  <link name="panda_controller_box">
     <collision>
       <origin rpy="0 0 0" xyz="-0.325 0 -0.38"/>
       <geometry>
@@ -34,12 +34,12 @@
       </geometry>
     </collision>
   </link>
-  <joint name="controller_box_fixed" type="fixed">
+  <joint name="panda_controller_box_fixed" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <parent link="base"/>
     <child link="controller_box"/>
   </joint>
-  <link name="pedestal_feet">
+  <link name="panda_pedestal_feet">
     <collision>
       <origin rpy="0 0 0" xyz="-0.1225 0 -0.758"/>
       <geometry>
@@ -47,14 +47,14 @@
       </geometry>
     </collision>
   </link>
-  <joint name="pedestal_feet_fixed" type="fixed">
+  <joint name="panda_pedestal_feet_fixed" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <parent link="pedestal_feet"/>
     <child link="panda_link0"/>
   </joint>
-  <joint name="pedestal_fixed" type="fixed">
+  <joint name="panda_pedestal_fixed" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-    <parent link="pedestal"/>
+    <parent link="panda_pedestal"/>
     <child link="panda_link0"/>
   </joint>
   <link name="panda_link0">
@@ -93,9 +93,9 @@
       </material>
     </collision>
   </link>
-  <joint name="pedestal_fixed" type="fixed">
+  <joint name="panda_pedestal_fixed" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-    <parent link="pedestal"/>
+    <parent link="panda_pedestal"/>
     <child link="panda_link0"/>
   </joint>
   <joint name="panda_joint1" type="revolute">
