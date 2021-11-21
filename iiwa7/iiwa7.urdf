@@ -4,7 +4,7 @@
     <visual>
       <origin rpy="1.57079632679 0 -1.57079632679" xyz="0.26 0.345 -0.91488"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/sawyer_pv/pedestal.STL"/>
+        <mesh filename="meshes/iiwa7/iiwa7_pedestal/pedestal.STL"/>
       </geometry>
       <material name="darkgray">
         <color rgba=".2 .2 .2 1"/>
