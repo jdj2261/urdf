@@ -53,12 +53,6 @@
     <parent link="pedestal"/>
     <child link="iiwa7_link_0"/>
   </joint>
-  <joint name="pedestal_fixed" type="fixed">
-    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-    <parent link="pedestal"/>
-    <child link="iiwa7_link_0"/>
-  </joint>
-  
   <link name="iiwa7_link_0">
     <inertial>
       <origin xyz="-0.1 0 0.07" rpy="0 0 0"/>
@@ -388,13 +382,13 @@
     </collision>
   </link>
     
-  <joint name="iiwa7_joint_ee" type="fixed">
+  <joint name="iiwa7_right_hand_fixed" type="fixed">
     <parent link="iiwa7_link_7"/>
-    <child link="iiwa7_link_ee"/>
-    <origin xyz="0 0 0.045" rpy="0 0 0"/>
+    <child link="iiwa7_right_hand"/>
+    <origin xyz="0 0 0.044" rpy="0 0 0"/>
   </joint>
     
-  <link name="iiwa7_link_ee">
+  <link name="iiwa7_right_hand">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0"/>

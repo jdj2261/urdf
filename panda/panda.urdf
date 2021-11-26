@@ -288,7 +288,7 @@
       </material>
     </collision>
   </link>
-  <joint name="panda_joint9" type="fixed">
+  <joint name="panda_right_gripper_fixed" type="fixed">
     <origin rpy="0 0 -1.5707963" xyz="0 0 0"/>
     <parent link="panda_right_hand"/>
     <child link="panda_right_gripper"/>
