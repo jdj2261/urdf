@@ -54,8 +54,8 @@
   </joint>
   <joint name="panda_pedestal_fixed" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-    <parent link="panda_pedestal"/>
-    <child link="panda_link0"/>
+    <parent link="panda_link0"/>
+    <child link="panda_pedestal"/>
   </joint>
   <link name="panda_link0">
     <visual>
@@ -270,8 +270,9 @@
     <child link="panda_right_hand"/>
   </joint>
 
-  <link name="gripper">
+  <link name="right_gripper">
     <visual>
+      <origin rpy="0 0 1.5707963" xyz="0 0 0"/>
       <geometry>
           <mesh filename="meshes/collision/hand.stl"/>
       </geometry>
@@ -288,10 +289,10 @@
       </material>
     </collision>
   </link>
-  <joint name="panda_right_gripper_fixed" type="fixed">
-    <origin rpy="0 0 -3.1415926" xyz="0 0 0"/>
+  <joint name="panda_right_right_gripper_fixed" type="fixed">
+    <origin rpy="0 0 -1.5707963" xyz="0 0 0"/>
     <parent link="panda_right_hand"/>
-    <child link="gripper"/>
+    <child link="right_gripper"/>
     <axis xyz="0 0 0"/>
   </joint>
   <link name="leftfinger">
@@ -314,7 +315,7 @@
   </link>
   <link name="rightfinger">
     <visual>
-      <origin rpy="0 0 3.1415926" xyz="0 0 0"/>
+      <origin rpy="0 0 3.1415927" xyz="0 0 0"/>
       <geometry>
           <mesh filename="meshes/collision/finger.stl"/>
       </geometry>
@@ -334,22 +335,22 @@
 
 
   <joint name="panda_finger_joint1" type="prismatic">
-    <parent link="gripper"/>
+    <parent link="right_gripper"/>
     <child link="leftfinger"/>
-    <origin rpy="0 0 0" xyz="0 0 0.0524"/>
+    <origin rpy="0 0 1.5707963" xyz="0 0 0.0524"/>
     <axis xyz="0 1 0"/>
     <limit effort="20" lower="0.0" upper="0.04" velocity="0.2"/>
   </joint>
 
   <joint name="panda_finger_joint2" type="prismatic">
-    <parent link="gripper"/>
+    <parent link="right_gripper"/>
     <child link="rightfinger"/>
-    <origin rpy="0 0 0" xyz="0 0 0.0524"/>
-    <axis xyz="0 -1 0"/>
+    <origin rpy="0 0 1.5707963" xyz="0 0 0.0524"/>
+    <axis xyz="0 1 0"/>
     <limit effort="20" lower="0.0" upper="0.04" velocity="0.2"/>
   </joint>
 
-  <link name="panda_finger_joint1_tip">
+  <!-- <link name="panda_finger_joint1_tip">
     <collision>
       <origin rpy="0 0 -3.1415927" xyz="0 -0.005 -0.015"/>
       <geometry>
@@ -360,7 +361,7 @@
 
   <joint  name="panda_finger_joint1_tip_fixed" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.0085 0.056"/>
-    <parent link="panda_leftfinger"/>
+    <parent link="leftfinger"/>
     <child link="panda_finger_joint1_tip"/>
   </joint>
 
@@ -376,5 +377,5 @@
     <origin rpy="0 0 0" xyz="0 -0.0085 0.056"/>
     <parent link="rightfinger"/>
     <child link="panda_finger_joint2_tip"/>
-  </joint>
+  </joint> -->
 </robot>
