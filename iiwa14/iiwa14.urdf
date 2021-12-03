@@ -81,42 +81,6 @@
     <parent link="pedestal"/>
     <child link="iiwa14_link_0"/>
   </joint>
-  <link name="iiwa14_link_0">
-    <visual>
-      <geometry>
-        <mesh filename="meshes/iiwa14/collision/link0.stl"/>
-      </geometry>
-      <material name="panda_white">
-        <color rgba="1. 1. 1. 1."/>
-      </material>
-    </visual>
-    <collision>
-      <geometry>
-        <mesh filename="meshes/iiwa14/collision/link0.stl"/>
-      </geometry>
-      <material name="panda_white">
-        <color rgba="1. 1. 1. 1."/>
-      </material>
-    </collision>
-  </link>
-  <link name="panda_link1">
-    <visual>
-      <geometry>
-        <mesh filename="meshes/iiwa14/collision/link1.stl"/>
-      </geometry>
-      <material name="panda_white">
-        <color rgba="1. 1. 1. 1."/>
-      </material>
-    </visual>
-    <collision>
-      <geometry>
-        <mesh filename="meshes/iiwa14/collision/link1.stl"/>
-      </geometry>
-      <material name="panda_white">
-        <color rgba="1. 1. 1. 1."/>
-      </material>
-    </collision>
-  </link>
   <joint name="pedestal_fixed" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <parent link="pedestal"/>

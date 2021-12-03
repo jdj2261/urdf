@@ -176,7 +176,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="sawyer_right_l0">
+  <link name="sawyer_link_0">
     <inertial>
       <origin rpy="0 0 0" xyz="0.024366 0.010969 0.14363"/>
       <mass value="5.3213"/>
@@ -201,7 +201,7 @@
   <joint  name="sawyer_right_j0" type="revolute">
     <origin rpy="0 0 0" xyz="0 0 0.08"/>
     <parent link="sawyer_right_arm_base_link"/>
-    <child link="sawyer_right_l0"/>
+    <child link="sawyer_link_0"/>
     <axis xyz="0 0 1"/>
     <limit effort="80.0" lower="-3.0503" upper="3.0503" velocity="1.74"/>
 <xacro:if value="$(arg gazebo)">
@@ -232,7 +232,7 @@
   </link>
   <joint  name="sawyer_head_pan" type="revolute">
     <origin rpy="0 0 0" xyz="0 0 0.2965"/>
-    <parent link="sawyer_right_l0"/>
+    <parent link="sawyer_link_0"/>
     <child link="sawyer_head"/>
     <axis xyz="0 0 1"/>
     <limit effort="8" lower="-5.0952" upper="0.9064" velocity="1.8"/>
@@ -251,11 +251,11 @@
   </link>
   <joint  name="sawyer_right_torso_itb" type="fixed">
     <origin rpy="0 -1.57079632679 0" xyz="-.055 0 .22"/>
-    <parent link="sawyer_right_l0"/>
+    <parent link="sawyer_link_0"/>
     <child link="sawyer_right_torso_itb"/>
     <axis xyz="0 0 1"/>
   </joint>
-  <link name="sawyer_right_l1">
+  <link name="sawyer_link_1">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0030849 -0.026811 0.092521"/>
       <mass value="4.505"/>
@@ -279,15 +279,15 @@
   </link>
   <joint  name="sawyer_right_j1" type="revolute">
     <origin rpy="-1.57079632679 1.57079632679 0" xyz="0.081 0.05 0.237"/>
-    <parent link="sawyer_right_l0"/>
-    <child link="sawyer_right_l1"/>
+    <parent link="sawyer_link_0"/>
+    <child link="sawyer_link_1"/>
     <axis xyz="0 0 1"/>
     <limit effort="80.0" lower="-3.8095" upper="2.2736" velocity="1.328"/>
 <xacro:if value="$(arg gazebo)">
     <dynamics damping="5.0" friction="2.0"/>
 </xacro:if>
   </joint>
-  <link name="sawyer_right_l2">
+  <link name="sawyer_link_2">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00016044 -0.014967 0.13582"/>
       <mass value="1.745"/>
@@ -311,15 +311,15 @@
   </link>
   <joint  name="sawyer_right_j2" type="revolute">
     <origin rpy="1.57079632679 0 0" xyz="0 -0.14 0.1425"/>
-    <parent link="sawyer_right_l1"/>
-    <child link="sawyer_right_l2"/>
+    <parent link="sawyer_link_1"/>
+    <child link="sawyer_link_2"/>
     <axis xyz="0 0 1"/>
     <limit effort="40.0" lower="-3.0426" upper="3.0426" velocity="1.957"/>
 <xacro:if value="$(arg gazebo)">
     <dynamics damping="5.0" friction="2.0"/>
 </xacro:if>
   </joint>
-  <link name="sawyer_right_l3">
+  <link name="sawyer_link_3">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0048135 -0.0281 -0.084154"/>
       <mass value="2.5097"/>
@@ -343,15 +343,15 @@
   </link>
   <joint  name="sawyer_right_j3" type="revolute">
     <origin rpy="-1.57079632679 0 0" xyz="0 -0.042 0.26"/>
-    <parent link="sawyer_right_l2"/>
-    <child link="sawyer_right_l3"/>
+    <parent link="sawyer_link_2"/>
+    <child link="sawyer_link_3"/>
     <axis xyz="0 0 1"/>
     <limit effort="40.0" lower="-3.0439" upper="3.0439" velocity="1.957"/>
  <xacro:if value="$(arg gazebo)">
     <dynamics damping="1.0" friction="0.5"/>
 </xacro:if>
   </joint>
-  <link name="sawyer_right_l4">
+  <link name="sawyer_link_4">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0018844 0.0069001 0.1341"/>
       <mass value="1.1136"/>
@@ -375,8 +375,8 @@
   </link>
   <joint  name="sawyer_right_j4" type="revolute">
     <origin rpy="1.57079632679 0 0" xyz="0 -0.125 -0.1265"/>
-    <parent link="sawyer_right_l3"/>
-    <child link="sawyer_right_l4"/>
+    <parent link="sawyer_link_3"/>
+    <child link="sawyer_link_4"/>
     <axis xyz="0 0 1"/>
     <limit effort="9.0" lower="-2.9761" upper="2.9761" velocity="3.485"/>
 <xacro:if value="$(arg gazebo)">
@@ -394,11 +394,11 @@
   </link>
   <joint  name="sawyer_right_arm_itb" type="fixed">
     <origin rpy="0 -1.57079632679 0" xyz="-.055 0 .075"/>
-    <parent link="sawyer_right_l4"/>
+    <parent link="sawyer_link_4"/>
     <child link="sawyer_right_arm_itb"/>
     <axis xyz="0 0 1"/>
   </joint>
-  <link name="sawyer_right_l5">
+  <link name="sawyer_link_5">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0061133 -0.023697 0.076416"/>
       <mass value="1.5625"/>
@@ -422,8 +422,8 @@
   </link>
   <joint  name="sawyer_right_j5" type="revolute">
     <origin rpy="-1.57079632679 0 0" xyz="0 0.031 0.275"/>
-    <parent link="sawyer_right_l4"/>
-    <child link="sawyer_right_l5"/>
+    <parent link="sawyer_link_4"/>
+    <child link="sawyer_link_5"/>
     <axis xyz="0 0 1"/>
     <limit effort="9.0" lower="-2.9761" upper="2.9761" velocity="3.485"/>
 <xacro:if value="$(arg gazebo)">
@@ -433,18 +433,18 @@
   <link name="sawyer_right_hand_camera"/>
   <joint  name="sawyer_right_hand_camera" type="fixed">
     <origin rpy="0 1.57079632679 0" xyz="0.039552 -0.033 0.0695"/>
-    <parent link="sawyer_right_l5"/>
+    <parent link="sawyer_link_5"/>
     <child link="sawyer_right_hand_camera"/>
     <axis xyz="0 0 0"/>
   </joint>
   <link name="sawyer_right_wrist"/>
   <joint  name="sawyer_right_wrist" type="fixed">
     <origin rpy="1.57079632679 0 0" xyz="0 0 0.10541"/>
-    <parent link="sawyer_right_l5"/>
+    <parent link="sawyer_link_5"/>
     <child link="sawyer_right_wrist"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <link name="sawyer_right_l6">
+  <link name="sawyer_link_6">
     <inertial>
       <origin rpy="0 0 0" xyz="-8.0726E-06 0.0085838 -0.0049566"/>
       <mass value="0.3292"/>
@@ -468,8 +468,8 @@
   </link>
   <joint  name="sawyer_right_j6" type="revolute">
     <origin rpy="-1.57079632679 -0.17453 3.1416" xyz="0 -0.11 0.1053"/>
-    <parent link="sawyer_right_l5"/>
-    <child link="sawyer_right_l6"/>
+    <parent link="sawyer_link_5"/>
+    <child link="sawyer_link_6"/>
     <axis xyz="0 0 1"/>
 <xacro:if value="$(arg gazebo)">
     <limit effort="9.0" lower="-3.14" upper="3.14" velocity="4.545"/>
@@ -504,10 +504,10 @@
   <joint  name="sawyer_right_hand" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.024"/>
     <axis xyz="0 0 1"/>
-    <parent link="sawyer_right_l6"/>
+    <parent link="sawyer_link_6"/>
     <child link="sawyer_right_hand"/>
   </joint>
-  <link name="sawyer_right_l1_2">
+  <link name="sawyer_link_1_2">
 <xacro:unless value="$(arg gazebo)">
     <inertial>
       <origin rpy="0 0 0" xyz="1.0E-08 1.0E-08 1.0E-08"/>
@@ -524,11 +524,11 @@
   </link>
   <joint  name="sawyer_right_j1_2" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="sawyer_right_l1"/>
-    <child link="sawyer_right_l1_2"/>
+    <parent link="sawyer_link_1"/>
+    <child link="sawyer_link_1_2"/>
     <axis xyz="0 0 1"/>
   </joint>
-  <link name="sawyer_right_l2_2">
+  <link name="sawyer_link_2_2">
 <xacro:unless value="$(arg gazebo)">
     <inertial>
       <origin rpy="0 0 0" xyz="1.0E-08 1.0E-08 1.0E-08"/>
@@ -545,11 +545,11 @@
   </link>
   <joint  name="sawyer_right_j2_2" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="sawyer_right_l2"/>
-    <child link="sawyer_right_l2_2"/>
+    <parent link="sawyer_link_2"/>
+    <child link="sawyer_link_2_2"/>
     <axis xyz="0 0 1"/>
   </joint>
-  <link name="sawyer_right_l4_2">
+  <link name="sawyer_link_4_2">
 <xacro:unless value="$(arg gazebo)">
     <inertial>
       <origin rpy="0 0 0" xyz="1.0E-08 1.0E-08 1.0E-08"/>
@@ -566,8 +566,8 @@
   </link>
   <joint  name="sawyer_right_j4_2" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="sawyer_right_l4"/>
-    <child link="sawyer_right_l4_2"/>
+    <parent link="sawyer_link_4"/>
+    <child link="sawyer_link_4_2"/>
     <axis xyz="0 0 1"/>
   </joint>
   <link name="sawyer_screen">
