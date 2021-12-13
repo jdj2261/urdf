@@ -15,10 +15,13 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.02 0 -0.29"/>
+      <origin rpy="1.57079632679 0 -1.57079632679" xyz="0.26 0.345 -0.91488"/>
       <geometry>
-        <cylinder length="0.62" radius="0.18"/>
+        <mesh filename="meshes/panda_pedestal/pedestal.STL"/>
       </geometry>
+      <material name="darkgray">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 -0.5"/>
@@ -60,7 +63,7 @@
   <link name="panda_link_0">
     <visual>
       <geometry>
-        <mesh filename="meshes/collision/link0.stl"/>
+        <mesh filename="meshes/visual/link0.stl"/>
       </geometry>
       <material name="panda_white">
         <color rgba="1. 1. 1. 1."/>
@@ -78,7 +81,7 @@
   <link name="panda_link_1">
     <visual>
       <geometry>
-        <mesh filename="meshes/collision/link1.stl"/>
+        <mesh filename="meshes/visual/link1.stl"/>
       </geometry>
       <material name="panda_white">
         <color rgba="1. 1. 1. 1."/>
@@ -109,7 +112,7 @@
   <link name="panda_link_2">
     <visual>
       <geometry>
-        <mesh filename="meshes/collision/link2.stl"/>
+        <mesh filename="meshes/visual/link2.stl"/>
       </geometry>
       <material name="panda_white">
         <color rgba="1. 1. 1. 1."/>
@@ -135,7 +138,7 @@
   <link name="panda_link_3">
     <visual>
       <geometry>
-        <mesh filename="meshes/collision/link3.stl"/>
+        <mesh filename="meshes/visual/link3.stl"/>
       </geometry>
       <material name="panda_white">
         <color rgba="1. 1. 1. 1."/>
@@ -161,7 +164,7 @@
   <link name="panda_link_4">
     <visual>
       <geometry>
-        <mesh filename="meshes/collision/link4.stl"/>
+        <mesh filename="meshes/visual/link4.stl"/>
       </geometry>
       <material name="panda_white">
         <color rgba="1. 1. 1. 1."/>
@@ -187,7 +190,7 @@
   <link name="panda_link_5">
     <visual>
       <geometry>
-        <mesh filename="meshes/collision/link5.stl"/>
+        <mesh filename="meshes/visual/link5.stl"/>
       </geometry>
       <material name="panda_white">
         <color rgba="1. 1. 1. 1."/>
@@ -213,7 +216,7 @@
   <link name="panda_link_6">
     <visual>
       <geometry>
-        <mesh filename="meshes/collision/link6.stl"/>
+        <mesh filename="meshes/visual/link6.stl"/>
       </geometry>
       <material name="panda_white">
         <color rgba="1. 1. 1. 1."/>
@@ -239,7 +242,7 @@
   <link name="panda_link_7">
     <visual>
       <geometry>
-        <mesh filename="meshes/collision/link7.stl"/>
+        <mesh filename="meshes/visual/link7.stl"/>
       </geometry>
       <material name="panda_white">
         <color rgba="1. 1. 1. 1."/>
@@ -274,13 +277,14 @@
     <visual>
       <origin rpy="0 0 1.5707963" xyz="0 0 0"/>
       <geometry>
-          <mesh filename="meshes/collision/hand.stl"/>
+          <mesh filename="meshes/visual/hand.stl"/>
       </geometry>
       <material name="panda_white">
         <color rgba="1. 1. 1. 1."/>
       </material>
     </visual>
     <collision>
+    <origin rpy="0 0 1.5707963" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/collision/hand.stl"/>
       </geometry>
@@ -298,7 +302,7 @@
   <link name="leftfinger">
     <visual>
       <geometry>
-          <mesh filename="meshes/collision/finger.stl"/>
+          <mesh filename="meshes/visual/finger.stl"/>
       </geometry>
       <material name="panda_black">
         <color rgba=".2 .2 .2 1"/>
@@ -317,13 +321,14 @@
     <visual>
       <origin rpy="0 0 3.1415927" xyz="0 0 0"/>
       <geometry>
-          <mesh filename="meshes/collision/finger.stl"/>
+          <mesh filename="meshes/visual/finger.stl"/>
       </geometry>
       <material name="panda_black">
         <color rgba=".2 .2 .2 1"/>
       </material>
     </visual>
     <collision>
+      <origin rpy="0 0 3.1415927" xyz="0 0 0"/>
       <geometry>
         <mesh filename="meshes/collision/finger.stl"/>
       </geometry>
@@ -332,7 +337,6 @@
       </material>
     </collision>
   </link>
-
 
   <joint name="panda_finger_joint1" type="prismatic">
     <parent link="right_gripper"/>
@@ -349,33 +353,4 @@
     <axis xyz="0 1 0"/>
     <limit effort="20" lower="0.0" upper="0.04" velocity="0.2"/>
   </joint>
-
-  <!-- <link name="panda_finger_joint1_tip">
-    <collision>
-      <origin rpy="0 0 -3.1415927" xyz="0 -0.005 -0.015"/>
-      <geometry>
-        <mesh filename="meshes/collision/finger.stl"/>
-      </geometry>
-    </collision>
-  </link>
-
-  <joint  name="panda_finger_joint1_tip_fixed" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0.0085 0.056"/>
-    <parent link="leftfinger"/>
-    <child link="panda_finger_joint1_tip"/>
-  </joint>
-
-  <link name="panda_finger_joint2_tip">
-    <collision>
-      <origin rpy="0 0 -3.1415927" xyz="0 0.005 -0.015"/>
-      <geometry>
-        <mesh filename="meshes/collision/finger.stl"/>
-      </geometry>
-    </collision>
-  </link>
-  <joint  name="anda_finger_joint2_tip_fixed" type="fixed">
-    <origin rpy="0 0 0" xyz="0 -0.0085 0.056"/>
-    <parent link="rightfinger"/>
-    <child link="panda_finger_joint2_tip"/>
-  </joint> -->
 </robot>
