@@ -341,7 +341,7 @@
     <joint name="panda_finger_joint1" type="prismatic">
     <parent link="right_gripper"/>
     <child link="leftfinger"/>
-    <origin rpy="0 0 1.5707963" xyz="0 0 0.0524"/>
+    <origin rpy="0 0 1.5707963" xyz="-0.04 0 0.0524"/>
     <axis xyz="0 1 0"/>
     <limit effort="20" lower="0.0" upper="0.04" velocity="0.2"/>
   </joint>
@@ -349,7 +349,7 @@
   <joint name="panda_finger_joint2" type="prismatic">
     <parent link="right_gripper"/>
     <child link="rightfinger"/>
-    <origin rpy="0 0 1.5707963" xyz="0 0 0.0524"/>
+    <origin rpy="0 0 1.5707963" xyz="0.04 0 0.0524"/>
     <axis xyz="0 1 0"/>
     <limit effort="20" lower="0.0" upper="0.04" velocity="0.2"/>
   </joint>
