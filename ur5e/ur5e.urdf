@@ -8,7 +8,7 @@
     <visual>
       <origin rpy="1.57079632679 0 -1.57079632679" xyz="0.26 0.345 -0.91488"/>
       <geometry>
-        <mesh filename="meshes/ur5e/ur5e_pedestal/pedestal.STL"/>
+        <mesh filename="meshes/ur5e_pedestal/pedestal.STL"/>
       </geometry>
       <material name="darkgray">
         <color rgba=".2 .2 .2 1"/>
@@ -61,7 +61,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
       <geometry>
-        <mesh filename="meshes/ur5e/visual/base_vis.stl"/>
+        <mesh filename="meshes/visual/base_vis.stl"/>
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1"/>
@@ -69,7 +69,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/ur5e/collision/base.stl"/>
+        <mesh filename="meshes/collision/base.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -90,7 +90,7 @@
     <visual>
     <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
       <geometry>
-        <mesh filename="meshes/ur5e/visual/shoulder_vis.stl"/>
+        <mesh filename="meshes/visual/shoulder_vis.stl"/>
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0"/>
@@ -98,7 +98,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/ur5e/collision/shoulder.stl"/>
+        <mesh filename="meshes/collision/shoulder.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -120,7 +120,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
       <geometry>
-        <mesh filename="meshes/ur5e/visual/upperarm_vis.stl"/>
+        <mesh filename="meshes/visual/upperarm_vis.stl"/>
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0"/>
@@ -128,7 +128,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/ur5e/collision/upperarm.stl"/>
+        <mesh filename="meshes/collision/upperarm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -149,7 +149,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
       <geometry>
-        <mesh filename="meshes/ur5e/visual/forearm_vis.stl"/>
+        <mesh filename="meshes/visual/forearm_vis.stl"/>
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0"/>
@@ -157,7 +157,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/ur5e/collision/forearm.stl"/>
+        <mesh filename="meshes/collision/forearm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -178,7 +178,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
       <geometry>
-        <mesh filename="meshes/ur5e/visual/wrist1_vis.stl"/>
+        <mesh filename="meshes/visual/wrist1_vis.stl"/>
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0"/>
@@ -186,7 +186,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/ur5e/collision/wrist1.stl"/>
+        <mesh filename="meshes/collision/wrist1.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -207,7 +207,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
       <geometry>
-        <mesh filename="meshes/ur5e/visual/wrist2_vis.stl"/>
+        <mesh filename="meshes/visual/wrist2_vis.stl"/>
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0"/>
@@ -215,7 +215,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/ur5e/collision/wrist2.stl"/>
+        <mesh filename="meshes/collision/wrist2.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -236,7 +236,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
       <geometry>
-        <mesh filename="meshes/ur5e/visual/wrist3_vis.stl"/>
+        <mesh filename="meshes/visual/wrist3_vis.stl"/>
       </geometry>
       <material name="LightGrey">
         <color rgba="0.7 0.7 0.7 1.0"/>
@@ -244,7 +244,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/ur5e/collision/wrist3.stl"/>
+        <mesh filename="meshes/collision/wrist3.stl"/>
       </geometry>
     </collision>
     <inertial>

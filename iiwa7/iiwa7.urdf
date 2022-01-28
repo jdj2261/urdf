@@ -1,10 +1,42 @@
 <?xml version="1.0"?>
 <robot name="iiwa7" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <link name="pedestal">
+  <link name="iiwa7_link_0">
+    <inertial>
+      <origin xyz="-0.1 0 0.07" rpy="0 0 0"/>
+      <mass value="5"/>
+      <inertia ixx="0.05"  ixy="0"  ixz="0" iyy="0.06" iyz="0" izz="0.03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/visual/link_0.stl"/>
+      </geometry>
+      <material name="Grey">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/collision/link_0.stl"/>
+      </geometry>
+      <material name="Grey">
+        <color rgba="0.4 0.4 0.4 1.0"/>
+      </material>
+    </collision>
+    <self_collision_checking>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <capsule radius="0.15" length="0.25"/>
+      </geometry>
+    </self_collision_checking>
+  </link>
+
+  <link name="iiwa7_pedestal">
     <visual>
       <origin rpy="1.57079632679 0 -1.57079632679" xyz="0.26 0.345 -0.91488"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/iiwa7_pedestal/pedestal.STL"/>
+        <mesh filename="meshes/iiwa7_pedestal/pedestal.STL"/>
       </geometry>
       <material name="darkgray">
         <color rgba=".2 .2 .2 1"/>
@@ -22,7 +54,14 @@
       <inertia ixx="5.0635929" ixy="0.00103417" ixz="0.80199628" iyy="6.08689388" iyz="0.00105311" izz="4.96191932"/>
     </inertial>
   </link>
-  <link name="controller_box">
+
+  <joint name="iiwa7_pedestal_fixed" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+    <parent link="iiwa7_link_0"/>
+    <child link="iiwa7_pedestal"/>
+  </joint>  
+
+  <link name="iiwa7_controller_box">
     <collision>
       <origin rpy="0 0 0" xyz="-0.325 0 -0.38"/>
       <geometry>
@@ -30,12 +69,14 @@
       </geometry>
     </collision>
   </link>
-  <joint name="controller_box_fixed" type="fixed">
+
+  <joint name="iiwa7_controller_box_fixed" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-    <parent link="base"/>
-    <child link="controller_box"/>
+    <parent link="iiwa7_link_0"/>
+    <child link="iiwa7_controller_box"/>
   </joint>
-  <link name="pedestal_feet">
+
+  <link name="iiwa7_pedestal_feet">
     <collision>
       <origin rpy="0 0 0" xyz="-0.1225 0 -0.758"/>
       <geometry>
@@ -43,52 +84,14 @@
       </geometry>
     </collision>
   </link>
-  <joint name="pedestal_feet_fixed" type="fixed">
+
+  <joint name="iiwa7_pedestal_feet_fixed" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-    <parent link="pedestal_feet"/>
-    <child link="iiwa7_link_0"/>
+    <parent link="iiwa7_link_0"/>
+    <child link="iiwa7_pedestal_feet"/>
   </joint>
-  <joint name="pedestal_fixed" type="fixed">
-    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-    <parent link="pedestal"/>
-    <child link="iiwa7_link_0"/>
-  </joint>
-  <link name="iiwa7_link_0">
-    <inertial>
-      <origin xyz="-0.1 0 0.07" rpy="0 0 0"/>
-      <mass value="5"/>
-      <inertia ixx="0.05"  ixy="0"  ixz="0" iyy="0.06" iyz="0" izz="0.03" />
-    </inertial>
-    
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="meshes/iiwa7/visual/link_0.stl"/>
-      </geometry>
-      <material name="Grey">
-        <color rgba="0.4 0.4 0.4 1.0"/>
-      </material>
-    </visual>
-    
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="meshes/iiwa7/collision/link_0.stl"/>
-      </geometry>
-      <material name="Grey">
-        <color rgba="0.4 0.4 0.4 1.0"/>
-      </material>
-    </collision>
-    
-    <self_collision_checking>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <capsule radius="0.15" length="0.25"/>
-      </geometry>
-    </self_collision_checking>
-    
-  </link>
-    
+
+
   <!-- joint between link_0 and link_1 -->
   <joint name="iiwa7_joint_1" type="revolute">
     <parent link="iiwa7_link_0"/>
@@ -113,7 +116,7 @@
     <visual>
       <origin xyz="0 0 0.0075" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/visual/link_1.stl"/>
+        <mesh filename="meshes/visual/link_1.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -122,7 +125,7 @@
     <collision>
       <origin xyz="0 0 0.0075" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/collision/link_1.stl"/>
+        <mesh filename="meshes/collision/link_1.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -153,7 +156,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/visual/link_2.stl"/>
+        <mesh filename="meshes/visual/link_2.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -163,7 +166,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/collision/link_2.stl"/>
+        <mesh filename="meshes/collision/link_2.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -195,7 +198,7 @@
     <visual>
       <origin xyz="0 0 -0.026" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/visual/link_3.stl"/>
+        <mesh filename="meshes/visual/link_3.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -205,7 +208,7 @@
     <collision>
       <origin xyz="0 0 -0.026" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/collision/link_3.stl"/>
+        <mesh filename="meshes/collision/link_3.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -238,7 +241,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/visual/link_4.stl"/>
+        <mesh filename="meshes/visual/link_4.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -248,7 +251,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/collision/link_4.stl"/>
+        <mesh filename="meshes/collision/link_4.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -280,7 +283,7 @@
     <visual>
       <origin xyz="0 0 -0.026" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/visual/link_5.stl"/>
+        <mesh filename="meshes/visual/link_5.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -290,7 +293,7 @@
     <collision>
       <origin xyz="0 0 -0.026" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/collision/link_5.stl"/>
+        <mesh filename="meshes/collision/link_5.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -322,7 +325,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/visual/link_6.stl"/>
+        <mesh filename="meshes/visual/link_6.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -332,7 +335,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/collision/link_6.stl"/>
+        <mesh filename="meshes/collision/link_6.stl"/>
       </geometry>
       <material name="Orange">
         <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
@@ -364,7 +367,7 @@
     <visual>
       <origin xyz="0 0 -0.0005" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/visual/link_7.stl"/>
+        <mesh filename="meshes/visual/link_7.stl"/>
       </geometry>
       <material name="Grey">
         <color rgba="0.4 0.4 0.4 1.0"/>
@@ -374,7 +377,7 @@
     <collision>
       <origin xyz="0 0 -0.0005" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/iiwa7/collision/link_7.stl"/>
+        <mesh filename="meshes/collision/link_7.stl"/>
       </geometry>
       <material name="Grey">
         <color rgba="0.4 0.4 0.4 1.0"/>
