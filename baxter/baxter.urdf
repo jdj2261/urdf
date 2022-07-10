@@ -57,6 +57,9 @@
       <geometry>
         <mesh filename="meshes/base/pedestal_link_collision.stl"/>
       </geometry>
+        <material name="darkgray">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -79,6 +82,9 @@
       <geometry>
         <sphere radius="0.001"/>
       </geometry>
+      <material name="darkgray">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -101,6 +107,9 @@
       <geometry>
         <sphere radius="0.001"/>
       </geometry>
+      <material name="darkgray">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -123,6 +132,9 @@
       <geometry>
         <sphere radius="0.001"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -175,6 +187,9 @@
       <geometry>
         <sphere radius="0.22"/>
       </geometry>
+      <material name="red">
+        <color rgba="0.8 0.3 0.3 0.3"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -197,6 +212,9 @@
       <geometry>
         <sphere radius="0.22"/>
       </geometry>
+      <material name="red">
+        <color rgba="0.8 0.3 0.3 0.3"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -294,6 +312,9 @@
       <geometry>
         <cylinder length="0.2722" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.01783 0.00086 0.19127"/>
@@ -317,6 +338,9 @@
       <geometry>
         <cylinder length="0.12" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.06845 0.00269 -0.00529"/>
@@ -340,6 +364,9 @@
       <geometry>
         <cylinder length="0.107" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00276 0.00132 0.18086"/>
@@ -377,6 +404,9 @@
       <geometry>
         <cylinder length="0.10" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.02611 0.00159 -0.01117"/>
@@ -400,6 +430,9 @@
       <geometry>
         <cylinder length="0.088" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00168 0.0046 0.13952"/>
@@ -445,6 +478,9 @@
       <geometry>
         <cylinder length="0.10" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.06041 0.00697 0.006"/>
@@ -468,6 +504,9 @@
       <geometry>
         <cylinder length="0.165" radius="0.06"/>
       </geometry>
+      <material name="lightgrey">
+        <color rgba=".1 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.00198 0.00125 0.01855"/>
@@ -723,6 +762,9 @@
       <geometry>
         <cylinder length="0.2722" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.01783 0.00086 0.19127"/>
@@ -746,6 +788,9 @@
       <geometry>
         <cylinder length="0.12" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.06845 0.00269 -0.00529"/>
@@ -769,6 +814,9 @@
       <geometry>
         <cylinder length="0.107" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00276 0.00132 0.18086"/>
@@ -806,6 +854,9 @@
       <geometry>
         <cylinder length="0.10" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.02611 0.00159 -0.01117"/>
@@ -829,6 +880,9 @@
       <geometry>
         <cylinder length="0.088" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00168 0.0046 0.13952"/>
@@ -874,6 +928,9 @@
       <geometry>
         <cylinder length="0.10" radius="0.06"/>
       </geometry>
+      <material name="darkred">
+        <color rgba=".5 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.06041 0.00697 0.006"/>
@@ -897,6 +954,9 @@
       <geometry>
         <cylinder length="0.165" radius="0.06"/>
       </geometry>
+      <material name="lightgrey">
+        <color rgba=".1 .1 .1 1"/>
+      </material>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.00198 0.00125 0.01855"/>
